@@ -1,0 +1,21 @@
+{
+  "name": "javascript_project_starter_kit_webpack",
+  "version": "1.0.0",
+  "description": "A starter kt for JavaScript project using webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "JavaScript",
+    "Webpack",
+    "New Project",
+    "Startr Kit"
+  ],
+  "author": {
+    "name": "Kola Kolade",
+    "email": "kolakolade@gmail.com",
+    "url": ""
+  },
+  "license": "MIT"
+}
