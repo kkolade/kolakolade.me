@@ -26,8 +26,7 @@
 
 # 📖 The Blog Ruby on Rails App <a name="about-project"></a>
 
-**XpensTrackr** is a budget management application built with Ruby-on-Rails.
-It is my Capstone project for the RoR module
+**JavaScript Project Starter Kit** is a starter kit to scaffold a javascript project
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -39,22 +38,15 @@ It is my Capstone project for the RoR module
     <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
     <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
     <li><a href="https://sass-lang.com/">SASS</a></li>
-    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Webpack</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Babel</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Eslint</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Stylelint</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Lint-Stage</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Husky</a></li>
   </ul>
 </details>
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li><a href="https://www.ruby-lang.org/">Ruby</a></li>
-    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
-  </ul>
-</details>
-<details>
-  <summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
+
 
 <!-- Features -->
 
