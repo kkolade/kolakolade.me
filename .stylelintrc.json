@@ -37,7 +37,8 @@
           "@include"
         ]
       }
-    ]
+    ],
+    "csstree/validator": true
   },
   "ignoreFiles": [
     "build/**",
