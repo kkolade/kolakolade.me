@@ -12,7 +12,11 @@
           "responsive",
           "screen",
           "forward",
-          "use"
+          "use",
+          "@function",
+          "@return",
+          "@mixin",
+          "@include"
         ]
       }
     ],
@@ -26,7 +30,11 @@
           "responsive",
           "screen",
           "forward",
-          "use"
+          "use",
+          "@function",
+          "@return",
+          "@mixin",
+          "@include"
         ]
       }
     ]
@@ -37,6 +45,7 @@
     "**/reset*.css",
     "**/bootstrap*.css",
     "**/*.js",
-    "**/*.jsx"
+    "**/*.jsx",
+    "src/assets/scss/_base.scss"
   ]
 }
