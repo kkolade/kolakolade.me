@@ -12,21 +12,18 @@
   - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 The Blog Ruby on Rails App <a name="about-project"></a>
+# 📖 kolakolade.me - A Personal Portfolio <a name="about-project"></a>
 
-**JavaScript Project Starter Kit** is a starter kit to scaffold a javascript project
+**kolakolade.me** is my personal portfolio built to showcase myself and the skills & knowledge acquired at the completion of the Remote Full Stack Web Development Program at Microverse - An online school for international web developers where students learn collaboratively with peers around the world.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -37,36 +34,36 @@
   <ul>
     <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
     <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
-    <li><a href="https://sass-lang.com/">SASS</a></li>
-    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Webpack</a></li>
-    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Babel</a></li>
-    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Eslint</a></li>
-    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Stylelint</a></li>
-    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Lint-Stage</a></li>
-    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Husky</a></li>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
   </ul>
 </details>
-
+<details>
+  <summary>Library</summary>
+  <ul>
+    <li><a href="https://sass-lang.com/">SASS</a></li>
+    <li><a href="https://gulpjs.com/">Gulp</a></li>
+    <li><a href="https://fontawesome.com/">Fontawesome</a></li>
+  </ul>
+</details>
 
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
 
-- **Built using MVC**
-- **Authentication with Devise**
-- **Authurization with Cancancan**
+- **High contrast colors**
+- **Parralax Effect**
+- **Grid layout**
+- **Form to gooogle sheet**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo](https://xpenstrackr.onrender.com/)
+Coming soon
+<!-- - [Live Demo](co) -->
 
-<!-- VIDEO DEMO -->
-## Video Demo <a name="live-demo"></a>
 
-- [Video Demo](https://www.loom.com/share/66e7963e9f3f4b0885be5ec092a46b21)
 
 <!-- GETTING STARTED -->
 
@@ -79,9 +76,7 @@ To get a local copy up and running, follow these steps.
 In order to run this project you need the followings installed and running on your system:
 
 - Git
-- Ruby
-- Rails
-- PostgreSQL
+- Gulp
 
 <!--
 Example command:
@@ -95,9 +90,9 @@ Example command:
 
 Clone this repository to your desired folder:
 
-<pre>git clone git@github.com:kkolade/rails_blog_app.git</pre>
+<pre>https://github.com/kkolade/portfolio</pre>
 
-- `cd xpenstrackr`
+- `cd portfolio`
 - `code .` <!-- If you are using VS Code -->
 <!--
 Example commands:
@@ -105,36 +100,21 @@ Example commands:
 
 ### Install
 
-Install the gems and packges required for this project with:
+Install the packages required for this project with:
 
 ```sh
-  gem install
   npm install
 ```
---->
 
 ### Usage
 
 To run the project, execute the following command:
 
-<pre>rails s</pre>
+<pre>npm run dev</pre>
 
 Open your browser and go to:
 <pre>http://localhost:3000/</pre>
 
-### Run tests
-
-To run tests, run the following command:
-
-<pre>rspec ./spec/</pre>
-
-<!--
-Example command:
-
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
 
 <!-- AUTHORS -->
 
@@ -153,7 +133,7 @@ Example command:
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] **Add dark/light theme**
-- [ ] **Implement React on the front-end**
+- [ ] **Use React to re-create the website**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -163,7 +143,7 @@ Example command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/kkolade/blog/issues).
+Feel free to check the [issues page](https://github.com/kkolade/portfolio/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -180,8 +160,8 @@ If you like this project please [buy me coffee](
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse for the opportunity to learn and grow
-I would like to also give credit to Gregoire Vella in Behance for his wonderful design.
+I would like to thank Microverse for the opportunity to learn and grow. <br>
+I would like to also give credit to Avinesh of GreatStack for this wonderful concept.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
