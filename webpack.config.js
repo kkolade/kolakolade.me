@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const ESLintPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -15,6 +16,12 @@ module.exports = {
       filename: '[name].css',
     }),
     new FaviconsWebpackPlugin('./src/assets/images/favicon.png'),
+    new ESLintPlugin({
+      failOnError: false,
+      failOnWarning: false,
+      emitWarning: false,
+      emitError: false,
+    }),
   ],
   output: {
     filename: 'main.js',
