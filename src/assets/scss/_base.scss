@@ -6,8 +6,8 @@
 $color-white: #fff;
 $color-black: #000;
 $color-grey: #777;
-$color-grey-dark: color.adjust($color-grey, -25%);
-$color-grey-light: color.adjust($color-white, 7.5%);
+$color-grey-dark: darken($color-grey, 25%);
+$color-grey-light: darken($color-white, 7.5%);
 $color-success-1: #4caf50;
 $color-success-2: #ddffdd;
 $color-error-1: #f44336;
@@ -22,9 +22,9 @@ $secondary: #262626;
 $accent: #2754b7;
 $text-1: $color-white;
 $text-2: #ababab;
-$text-3: color.adjust($primary, 20%);
+$text-3: lighten($primary, 20);
 $text-4: #343434;
-$text-5: color.adjust($primary, -20%);
+$text-5: darken($primary, 20);
 $body: #080808;
 
 $color-map: (
@@ -140,7 +140,7 @@ $z-modal: 1000;
 // ------MIXINS-------
 
 @mixin google-font($font, $weight-string) {
-  $font: string.unquote($font);
+  $font: unquote($font);
 
   @import url('https://fonts.googleapis.com/css2?family=#{$font}:wght@#{$weight-string}&display=swap');
 }
