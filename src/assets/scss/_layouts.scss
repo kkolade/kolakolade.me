@@ -1,2 +1,49 @@
 @use 'base' as b;
 
+// Navbar
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: b.$sp-1-5 10%;
+    background-color: b.color(body);
+    top: 0;
+    z-index: 1;
+  
+
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    width: b.$sp-3 * 8;
+  }
+
+  &__list-item {
+    display: inline-block;
+    margin: b.$sp-1 b.$sp-2;
+  }
+
+  &__link {
+    color: b.$color-white;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 0;
+      height: b.$sp-0-25;
+      background: b.color(primary);
+      position: absolute;
+      left: 0;
+      bottom: - b.$sp-0-75;
+      transition: 0.25s;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
