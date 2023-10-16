@@ -16,7 +16,8 @@
           "@function",
           "@return",
           "@mixin",
-          "@include"
+          "@include",
+          "@extend"
         ]
       }
     ],
@@ -34,7 +35,8 @@
           "@function",
           "@return",
           "@mixin",
-          "@include"
+          "@include",
+          "@extend"
         ]
       }
     ],

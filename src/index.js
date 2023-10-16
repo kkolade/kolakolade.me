@@ -1,6 +1,7 @@
 /* eslint-env browser */
 
 // IMPORTS
+import Typewriter from 'typewriter-effect/dist/core';
 import './assets/css/style.css';
 import navbarLogo from './assets/images/kolakolade_logo.png';
 import './assets/scss/main.scss';
@@ -15,7 +16,22 @@ import '@fortawesome/fontawesome-free/js/solid';
 
 // Site logo
 const logoDiv = document.querySelector('.navbar__logo');
+// Typewriter text
+const typewriter = document.querySelector('#typewriter');
 
 // FUNCTIONS
 // Site logo
 logoDiv.src = navbarLogo;
+// Typewriter text
+new Typewriter(typewriter, {
+  strings: [
+    'Full Stack Web Developer',
+    'Mobile App Developer',
+    'Wordpress Developer',
+    'Tech Enthusiast',
+  ],
+  autoStart: true,
+  typeSpeed: 100,
+  backSpeed: 50,
+  loop: true,
+});

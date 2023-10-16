@@ -16,12 +16,6 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.{css,scss}": [
-      "stylelint --fix"
-    ],
-    "*.{js,jsx}": [
-      "eslint --fix"
-    ],
     "*.html": [
       "hint"
     ]
