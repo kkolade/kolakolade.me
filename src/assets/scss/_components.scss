@@ -77,3 +77,134 @@
     color: b.color(text-3);
   }
 }
+
+/* ------Popup------- */
+.about {
+  &__overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba($color: #000, $alpha: 0.5);
+    color: b.color(text-4);
+  }
+
+  &__popup {
+    width: 60vw;
+    height: 75vh;
+    background-color: b.color(text-1);
+    margin: b.$sp-1 * 8 auto;
+    padding: b.$spe-1-25 * 4;
+    border-radius: b.$sp-1;
+    position: relative;
+
+    &__close {
+      color: b.color(primary);
+      font-size: b.font-size(bigger);
+      cursor: pointer;
+      position: absolute;
+      top: b.$sp-1-25;
+      right: b.$sp-1-25 * 2;
+    }
+
+    &__header {
+      display: flex;
+    }
+
+    &__img {
+      margin-top: b.$sp-1-5;
+      width: b.$sp-1-25 * 6;
+      height: b.$sp-1-25 * 6;
+      border-radius: b.$sp-0-5;
+    }
+
+    &__title,
+    &__headline {
+      color: b.color(text-4);
+      margin-left: b.$sp-1-25;
+    }
+
+    &__headline {
+      margin-top: b.$sp-0-5;
+    }
+
+    &__description {
+      font-size: b.font-size(small);
+      margin-top: b.$sp-1-25;
+
+      &-text {
+        margin-bottom: b.$sp-0-75;
+      }
+    }
+  }
+}
+
+// Back to top button
+.back-to-top {
+  position: fixed;
+  bottom: b.$sp-1-25 * 4;
+  right: b.$sp-3 * 2;
+  z-index: b.$z-fixed;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: b.color(primary);
+  cursor: pointer;
+  transition: color 0.5s;
+
+  &:hover {
+    color: b.color(text-3);
+  }
+}
+
+//------mobile-------
+@media only screen and (max-width: b.screen-size(small)) {
+  .about {
+    &__popup {
+      width: 90vw;
+      padding: b.$sp-1-5;
+      display: flex;
+      flex-direction: column;
+
+      &__header {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &__img {
+        margin-top: b.$sp-1-5;
+        width: 60%;
+        height: auto;
+        margin: b.$sp-2 auto;
+        border-radius: b.$sp-0-5;
+      }
+
+      &__title,
+      &__headline {
+        color: b.color(text-4);
+        text-align: center;
+      }
+
+      &__headline {
+        margin-top: b.$sp-0-5;
+        font-weight: b.font-weight(bold);
+      }
+
+      &__description {
+        font-size: b.font-size(small);
+        margin-top: b.$sp-1-25;
+        overflow-y: scroll;
+
+        &-text {
+          margin-bottom: b.$sp-0-75;
+        }
+      }
+    }
+  }
+
+  .btn--secondary {
+    display: block;
+    width: 100%;
+  }
+}
