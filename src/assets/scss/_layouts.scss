@@ -188,3 +188,93 @@
     align-items: center;
   }
 }
+
+/* ------Portfolio------- */
+.portfolio {
+  padding: b.$sp-1-5 * 3 0;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(b.$sp-3 * 8, 1fr));
+    gap: b.$sp-3;
+    margin-top: b.$sp-2;
+  }
+
+  &__work {
+    border-radius: b.$sp-1;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s;
+
+    &__image {
+      width: 100%;
+      border-radius: b.$sp-1;
+      display: block;
+      transition: transform 0.5s;
+    }
+
+    &__layer {
+      width: 100%;
+      height: 0;
+      background: linear-gradient(rgba(0, 0, 0, 0.6), b.color(primary));
+      border-radius: b.$sp-1;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0 b.$sp-2 * 2;
+      text-align: center;
+      font-size: b.font-size(small);
+      opacity: 0;
+      transition:
+        height 0.5s,
+        opacity 0.5s;
+
+      .portfolio__work__title {
+        font-weight: b.font-weight(500);
+        margin-bottom: b.$sp-2;
+      }
+
+      .portfolio__work__link-item {
+        margin-top: b.$sp-2;
+        color: b.color(primary);
+        text-decoration: none;
+        line-height: b.$sp-2;
+        background-color: b.color(text-1);
+        padding: b.$sp-0-75 b.$sp-1;
+        border-radius: b.$sp-1-5;
+        text-align: center;
+        display: inline-block;
+        margin-left: b.$sp-0-5;
+
+        &:hover {
+          background-color: b.$color-grey-light;
+          box-shadow: 0px 2px 5px rgba(250, 250, 250, 0.7);
+        }
+
+        &:active {
+          transform: translateY(2px);
+          background-color: darken(b.$color-grey-light, 10%);
+        }
+      }
+    }
+
+    &:hover {
+      .portfolio__work__image {
+        transform: scale(1.1);
+      }
+
+      .portfolio__work__layer {
+        height: 100%; /* Expand the layer */
+        opacity: 1; /* Show the layer */
+      }
+    }
+  }
+
+  &__link {
+    margin: b.$sp-1-25 * 4 auto;
+  }
+}
