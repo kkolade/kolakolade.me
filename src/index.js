@@ -3,6 +3,7 @@
 // IMPORTS
 import Typewriter from 'typewriter-effect/dist/core';
 import './assets/css/style.css';
+import cvPDF from './assets/docs/kolakolade.pdf';
 import aboutImage from './assets/images/kolakolade_4.png';
 import popupImage from './assets/images/kolakolade_5.png';
 import navbarLogo from './assets/images/kolakolade_logo.png';
@@ -38,6 +39,18 @@ const popupImg = document.querySelector('.about__popup__img');
 const portfolioImg1 = document.querySelector('#portfolio__work__image-1');
 const portfolioImg2 = document.querySelector('#portfolio__work__image-2');
 const portfolioImg3 = document.querySelector('#portfolio__work__image-3');
+// CV
+const cv = document.querySelector('.contact__cv');
+// Contact form
+const contactForm = document.querySelector(
+  'form[name="submit-to-google-sheet"]'
+);
+const submitMsg = document.querySelector('#contact__submit__message');
+const scriptURL =
+  'https://script.google.com/macros/s/AKfycbxOUWFGKbVcjy7kLumS_JEYnZWNYhEPJ3ag6V-iH452237mLNhQ2FyLZkIV4fLU5m1bSA/exec';
+// Footer Date
+const thisYear = new Date().getFullYear();
+const currentYear = document.querySelector('#current-year');
 
 // FUNCTIONS
 // Site logo
@@ -115,3 +128,33 @@ aboutOverlay.addEventListener('click', (e) => {
 portfolioImg1.src = portfolioImage1;
 portfolioImg2.src = portfolioImage2;
 portfolioImg3.src = portfolioImage3;
+
+// CV
+cv.href = cvPDF;
+
+// Contact form
+// Form Submission
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  fetch(scriptURL, { method: 'POST', body: new FormData(contactForm) })
+    // eslint-disable-next-line no-unused-vars
+    .then((response) => {
+      submitMsg.innerText = 'Message sent successfully';
+      setTimeout(() => {
+        submitMsg.innerText = '';
+      }, 3000);
+      contactForm.reset();
+    })
+    // eslint-disable-next-line no-unused-vars
+    .catch((error) => {
+      submitMsg.innerText = 'Something went wrong';
+      submitMsg.style.color = '#ffdddd';
+      setTimeout(() => {
+        submitMsg.innerText = '';
+      }, 3000);
+      contactForm.reset();
+    });
+});
+
+// Footer Date
+currentYear.innerText = thisYear;

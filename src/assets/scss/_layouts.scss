@@ -321,6 +321,11 @@
     &:active {
       transform: translateY(2px);
     }
+
+    &__size {
+      font-size: b.font-size(smaller);
+      margin-top: b.$sp-0-5;
+    }
   }
 
   &__form {
