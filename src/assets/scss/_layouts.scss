@@ -188,3 +188,85 @@
     align-items: center;
   }
 }
+
+//---Contact----
+.contact {
+  &__col-1 {
+    flex-basis: 35%;
+  }
+
+  &__col-2 {
+    flex-basis: 60%;
+  }
+
+  &__detail {
+    margin-top: b.$sp-1-5 * 2;
+  }
+
+  .detail-icon {
+    color: b.color(text-1);
+    margin-right: b.$sp-1;
+  }
+
+  .social {
+    margin-top: b.$sp-1-5 * 2;
+    &-icon {
+      font-size: b.font-size(bigger);
+      margin-right: b.$sp-1-25;
+
+      &:hover {
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  &__cv {
+    margin-top: b.$sp-3 * 5;
+    background-color: b.color(primary);
+
+    &:hover {
+      background-color: transparent;
+    }
+
+    &:active {
+      transform: translateY(2px);
+    }
+  }
+
+  &__form {
+    width: 100%;
+  }
+
+  &__input {
+    width: 100%;
+    border: 0;
+    outline: none;
+    background-color: b.color(secondary);
+    padding: b.$sp-1-5;
+    margin: b.$sp-1-5 0;
+    color: b.color(text-1);
+    font-size: b.font-size(big);
+    border-radius: b.$sp-0-5;
+  }
+
+  #contact__submit__message {
+    display: block;
+    color: b.color(success);
+    margin-top: b.$sp-1-5;
+  }
+}
+
+// footer
+.footer {
+  width: 100%;
+  height: b.$height-footer;
+  text-align: center;
+  padding: b.$sp-2 0;
+  background-color: b.color(secondary);
+  font-weight: b.font-weight(300);
+  margin-top: b.$sp-1;
+
+  .fa-heart {
+    color: b.color(primary);
+  }
+}
