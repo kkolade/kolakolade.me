@@ -16,7 +16,10 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.html": []
+    "*.html": [],
+    "*.{css,scss}": [],
+    "*.{js,jsx}": [],
+    "*.md": []
   },
   "keywords": [
     "JavaScript",
