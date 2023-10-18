@@ -52,14 +52,10 @@ const scriptURL =
 const thisYear = new Date().getFullYear();
 const currentYear = document.querySelector('#current-year');
 // Mobile menu
-const navbar = document.querySelector('#navbar');
-const showMenu = document.querySelector('#navbar__show-menu');
-const closeMenu = document.querySelector('#navbar__close-menu');
-const sideMenu = document.querySelector('#navbar__side-menu');
-console.log(navbar);
-console.log(showMenu);
-console.log(closeMenu);
-console.log(sideMenu);
+const hamburger = document.querySelector('.navbar__hamburger');
+const navMenu = document.querySelector('.navbar__menu');
+const navLink = document.querySelectorAll('.navbar__link');
+
 // FUNCTIONS
 // Site logo
 logoDiv.src = navbarLogo;
@@ -136,21 +132,23 @@ aboutOverlay.addEventListener('click', (e) => {
 currentYear.innerText = thisYear;
 
 // Mobile menu
-navbar.addEventListener('click', (e) => {
-  if (e.target.id === 'navbar__show-menu') {
-    sideMenu.style.right = '0';
-    console.log(showMenu);
-    console.log(sideMenu);
-  }
+hamburger.addEventListener('click', () => {
+  /* Toggle active class */
+  hamburger.classList.toggle('active');
+  navMenu.classList.toggle('active');
+
+  /* Toggle aria-expanded value */
+  const menuOpen = navMenu.classList.contains('active');
+  const newMenuOpenStatus = menuOpen;
+  hamburger.setAttribute('aria-expanded', newMenuOpenStatus);
 });
 
-navbar.addEventListener('click', (e) => {
-  if (e.target.id === 'navbar__close-menu' || e.target.className === 'navbar__list-item') {
-    sideMenu.style.right = '-24rem';
-    console.log(closeMenu);
-    console.log(sideMenu);
-  }
-});
+navLink.forEach((link) =>
+  link.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
+  })
+);
 
 // Portfolio images
 portfolioImg1.src = portfolioImage1;

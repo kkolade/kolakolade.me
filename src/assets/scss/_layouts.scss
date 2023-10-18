@@ -14,13 +14,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    align-items: center;
   }
 
   &__logo {
     width: b.$sp-3 * 8;
   }
 
-  &__list-item {
+  &__item {
     display: inline-block;
     margin: b.$sp-1 b.$sp-2;
   }
@@ -49,6 +50,10 @@
 
   &__mobile__icon {
     display: none !important;
+  }
+
+  &__hamburger {
+    display: none;
   }
 }
 
@@ -369,37 +374,63 @@
 //------Small Screens-------
 @media only screen and (max-width: b.screen-size(small)) {
   .navbar {
-    &__list {
+    &__menu {
       background-color: b.color(primary);
       position: fixed;
-      top: 0;
-      right: b.$sp-2 * -12;
-      width: b.$sp-2 * 12;
+      // left: 0;
+      left: -100%;
+      top: b.$sp-1-5 * 4.5;
+      width: 100%;
       font-size: b.font-size(h2);
-      height: 100vh;
-      padding-top: b.$sp-2 * 5;
-      transition: 0.2s;
-    }
+      padding-top: b.$sp-2 * 2;
+      padding-bottom: b.$sp-1-5 * 2;
+      text-align: center;
+      transition: 400ms;
 
-    &__list-item {
-      display: block;
-      margin-top: b.$sp-2;
-      z-index: 2;
-
-      &:hover {
-        background-color: lighten(b.color(primary), 20%);
+      &.active {
+        left: 0;
       }
     }
 
-    &__mobile__icon {
-      display: block !important;
-      font-size: b.font-size(h2);
+    &__item {
+      display: block;
+      margin-top: b.$sp-2;
+      z-index: 2;
     }
 
-    #navbar__close-menu {
-      position: absolute;
-      top: b.$sp-2;
-      left: b.$sp-2;
+    &__link {
+      transition: 400ms ease;
+
+      &:hover, &:focus {
+        color: black;
+      }
+    }
+
+    &__hamburger {
+      display: block;
+      cursor: pointer;
+      z-index: 15;
+
+      &__bar {
+        display: block;
+        background-color: #fff;
+        width: 24px;
+        height: 2px;
+        margin: 6px auto;
+        transition: all 300ms ease-in-out;
+      }
+      
+      &.active .navbar__hamburger__bar:nth-child(2) {
+        opacity: 0;
+      }
+
+      &.active .navbar__hamburger__bar:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+      }
+
+      &.active .navbar__hamburger__bar:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+      }
     }
   }
 
