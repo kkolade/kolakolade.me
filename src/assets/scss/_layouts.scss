@@ -365,3 +365,109 @@
     color: b.color(primary);
   }
 }
+
+//------Small Screens-------
+@media only screen and (max-width: b.screen-size(small)) {
+  .navbar {
+    &__list {
+      background-color: b.color(primary);
+      position: fixed;
+      top: 0;
+      right: b.$sp-2 * -12;
+      width: b.$sp-2 * 12;
+      font-size: b.font-size(h2);
+      height: 100vh;
+      padding-top: b.$sp-2 * 5;
+      transition: 0.2s;
+    }
+
+    &__list-item {
+      display: block;
+      margin-top: b.$sp-2;
+      z-index: 2;
+
+      &:hover {
+        background-color: lighten(b.color(primary), 20%);
+      }
+    }
+
+    &__mobile__icon {
+      display: block !important;
+      font-size: b.font-size(h2);
+    }
+
+    #navbar__close-menu {
+      position: absolute;
+      top: b.$sp-2;
+      left: b.$sp-2;
+    }
+  }
+
+  .hero {
+    background-image: url('../images/kolakolade_portfolio_mobile_bg.png');
+
+    &__text-content {
+      margin-top: 158%;
+      font-size: b.font-size(normal);
+
+      h1 {
+        font-size: b.font-size(small) * 2;
+      }
+
+      &__typewriter {
+        font-size: b.font-size(big);
+      }
+    }
+
+    &__cta {
+      font-size: b.font-size(small);
+    }
+
+    &__social {
+      margin-top: b.$sp-3;
+    }
+
+    .social-icon {
+      font-size: b.font-size(big);
+    }
+  }
+
+  .about {
+    &__col-1,
+    &__col-2 {
+      flex-basis: 100%;
+      width: 100%;
+    }
+
+    &__col-1 {
+      margin-bottom: b.$sp-3;
+    }
+
+    &__tab {
+      &__link {
+        margin-right: b.$sp-1-5;
+        font-size: b.font-size(small);
+        font-weight: b.font-weight(bold);
+      }
+    }
+
+    &__skills__icons {
+        justify-content: center;
+      }
+    }
+
+  .contact {
+    &__col-1, &__col-2 {
+      flex-basis: 100%;
+  
+    }
+  
+    &__col-1 {
+      margin-bottom: b.$sp-2 * 4;
+    }
+  
+    &__cv {
+      margin-top: b.$sp-2 * 2;
+    }
+  }
+}

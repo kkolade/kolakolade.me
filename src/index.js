@@ -51,7 +51,15 @@ const scriptURL =
 // Footer Date
 const thisYear = new Date().getFullYear();
 const currentYear = document.querySelector('#current-year');
-
+// Mobile menu
+const navbar = document.querySelector('#navbar');
+const showMenu = document.querySelector('#navbar__show-menu');
+const closeMenu = document.querySelector('#navbar__close-menu');
+const sideMenu = document.querySelector('#navbar__side-menu');
+console.log(navbar);
+console.log(showMenu);
+console.log(closeMenu);
+console.log(sideMenu);
 // FUNCTIONS
 // Site logo
 logoDiv.src = navbarLogo;
@@ -124,6 +132,26 @@ aboutOverlay.addEventListener('click', (e) => {
   }
 });
 
+// Footer Date
+currentYear.innerText = thisYear;
+
+// Mobile menu
+navbar.addEventListener('click', (e) => {
+  if (e.target.id === 'navbar__show-menu') {
+    sideMenu.style.right = '0';
+    console.log(showMenu);
+    console.log(sideMenu);
+  }
+});
+
+navbar.addEventListener('click', (e) => {
+  if (e.target.id === 'navbar__close-menu' || e.target.className === 'navbar__list-item') {
+    sideMenu.style.right = '-24rem';
+    console.log(closeMenu);
+    console.log(sideMenu);
+  }
+});
+
 // Portfolio images
 portfolioImg1.src = portfolioImage1;
 portfolioImg2.src = portfolioImage2;
@@ -155,6 +183,3 @@ contactForm.addEventListener('submit', (e) => {
       contactForm.reset();
     });
 });
-
-// Footer Date
-currentYear.innerText = thisYear;
