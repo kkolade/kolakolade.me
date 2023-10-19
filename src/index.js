@@ -1,6 +1,10 @@
 /* eslint-env browser */
 
 // IMPORTS
+import '@fortawesome/fontawesome-free/js/brands';
+import '@fortawesome/fontawesome-free/js/fontawesome';
+import '@fortawesome/fontawesome-free/js/regular';
+import '@fortawesome/fontawesome-free/js/solid';
 import Typewriter from 'typewriter-effect/dist/core';
 import './assets/css/style.css';
 import cvPDF from './assets/docs/kolakolade.pdf';
@@ -11,20 +15,15 @@ import portfolioImage1 from './assets/images/work1.png';
 import portfolioImage2 from './assets/images/work2.png';
 import portfolioImage3 from './assets/images/work3.png';
 import './assets/scss/main.scss';
-// Import fontawesome
-import '@fortawesome/fontawesome-free/js/brands';
-import '@fortawesome/fontawesome-free/js/fontawesome';
-import '@fortawesome/fontawesome-free/js/regular';
-import '@fortawesome/fontawesome-free/js/solid';
 
 // VARIABLES
 
+// Navbar
+const navbar = document.querySelector('.navbar');
 // Site logo
 const logoDiv = document.querySelector('.navbar__logo');
 // Typewriter text
 const typewriter = document.querySelector('#typewriter');
-// Back to top button
-const backToTopBtn = document.querySelector('.back-to-top');
 // About Image
 const aboutImg = document.querySelector('.about__img');
 // About Overlay & Popup
@@ -48,6 +47,8 @@ const contactForm = document.querySelector(
 const submitMsg = document.querySelector('#contact__submit__message');
 const scriptURL =
   'https://script.google.com/macros/s/AKfycbxOUWFGKbVcjy7kLumS_JEYnZWNYhEPJ3ag6V-iH452237mLNhQ2FyLZkIV4fLU5m1bSA/exec';
+// Back to top button
+const backToTopBtn = document.querySelector('.back-to-top');
 // Footer Date
 const thisYear = new Date().getFullYear();
 const currentYear = document.querySelector('#current-year');
@@ -80,8 +81,10 @@ const scrollFunction = () => {
     document.documentElement.scrollTop > 300
   ) {
     backToTopBtn.classList.remove('hidden');
+    navbar.classList.add('scrolled-nav');
   } else {
     backToTopBtn.classList.add('hidden');
+    navbar.classList.remove('scrolled-nav');
   }
 };
 
