@@ -14,6 +14,7 @@ import navbarLogo from './assets/images/kolakolade_logo.png';
 import portfolioImage1 from './assets/images/work1.png';
 import portfolioImage2 from './assets/images/work2.png';
 import portfolioImage3 from './assets/images/work3.png';
+import portfolioImage4 from './assets/images/work4.png';
 import './assets/scss/main.scss';
 
 // VARIABLES
@@ -38,6 +39,7 @@ const popupImg = document.querySelector('.about__popup__img');
 const portfolioImg1 = document.querySelector('#portfolio__work__image-1');
 const portfolioImg2 = document.querySelector('#portfolio__work__image-2');
 const portfolioImg3 = document.querySelector('#portfolio__work__image-3');
+const portfolioImg4 = document.querySelector('#portfolio__work__image-4');
 // CV
 const cv = document.querySelector('.contact__cv');
 // Contact form
@@ -157,6 +159,7 @@ navLink.forEach((link) =>
 portfolioImg1.src = portfolioImage1;
 portfolioImg2.src = portfolioImage2;
 portfolioImg3.src = portfolioImage3;
+portfolioImg4.src = portfolioImage4;
 
 // CV
 cv.href = cvPDF;

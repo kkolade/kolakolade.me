@@ -91,13 +91,15 @@
   }
 
   &__popup {
-    width: 60vw;
+    width: 75vw;
     height: 75vh;
     background-color: b.color(text-1);
     margin: b.$sp-1 * 8 auto;
     padding: b.$spe-1-25 * 4;
     border-radius: b.$sp-1;
     position: relative;
+    overflow:scroll;
+    overflow-x:hidden;
 
     &__close {
       color: b.color(primary);
